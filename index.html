@@ -11,9 +11,9 @@
     content="ÉLAN Maison — Contemporary luxury furniture, refined interiors and modern design."
   />
 
-  <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
   <link
     href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600&family=Manrope:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;1,400&display=swap"
     rel="stylesheet"
@@ -30,7 +30,6 @@
       --white: #ffffff;
       --dark: #1c1c19;
       --accent: #8a7158;
-      --radius: 28px;
     }
 
     * {
@@ -74,9 +73,7 @@
       color: white;
     }
 
-    /* =========================
-       HEADER
-    ========================== */
+    /* HEADER */
 
     .header {
       position: fixed;
@@ -144,10 +141,11 @@
     }
 
     .icon-btn {
-      width: 42px;
+      min-width: 42px;
       height: 42px;
+      padding: 0 12px;
       border: 1px solid rgba(255, 255, 255, 0.35);
-      border-radius: 50%;
+      border-radius: 50px;
       background: rgba(255, 255, 255, 0.08);
       color: inherit;
       display: grid;
@@ -155,16 +153,17 @@
       cursor: pointer;
       position: relative;
       transition: 0.3s ease;
+      font-size: 11px;
     }
 
     .header.scrolled .icon-btn {
       border-color: var(--line);
-      background: rgba(255,255,255,.45);
+      background: rgba(255, 255, 255, .45);
     }
 
     .icon-btn:hover {
       transform: translateY(-2px);
-      background: rgba(255,255,255,.18);
+      background: rgba(255, 255, 255, .18);
     }
 
     .count {
@@ -192,9 +191,7 @@
       display: none;
     }
 
-    /* =========================
-       HERO
-    ========================== */
+    /* HERO */
 
     .hero {
       min-height: 100vh;
@@ -298,9 +295,7 @@
       transform: rotate(-8deg);
     }
 
-    /* =========================
-       GENERAL
-    ========================== */
+    /* GENERAL */
 
     .section {
       padding: 110px 5vw;
@@ -358,9 +353,7 @@
       width: 52px;
     }
 
-    /* =========================
-       CATEGORIES
-    ========================== */
+    /* CATEGORIES */
 
     .category-grid {
       display: grid;
@@ -418,9 +411,7 @@
       font-weight: 400;
     }
 
-    /* =========================
-       EDITORIAL BAND
-    ========================== */
+    /* EDITORIAL */
 
     .editorial {
       margin: 0 5vw;
@@ -486,9 +477,7 @@
       color: black;
     }
 
-    /* =========================
-       PRODUCTS
-    ========================== */
+    /* SHOP */
 
     .shop {
       padding-top: 130px;
@@ -629,9 +618,7 @@
       font-size: 13px;
     }
 
-    /* =========================
-       FEATURED STORY
-    ========================== */
+    /* STORY */
 
     .story {
       padding: 60px 5vw 130px;
@@ -695,9 +682,7 @@
       text-transform: uppercase;
     }
 
-    /* =========================
-       NEW COLLECTION
-    ========================== */
+    /* COLLECTION BANNER */
 
     .collection-banner {
       min-height: 82vh;
@@ -729,9 +714,7 @@
       font-size: 14px;
     }
 
-    /* =========================
-       MARQUEE
-    ========================== */
+    /* MARQUEE */
 
     .marquee {
       overflow: hidden;
@@ -764,9 +747,7 @@
       to { transform: translateX(-50%); }
     }
 
-    /* =========================
-       NEWSLETTER
-    ========================== */
+    /* NEWSLETTER */
 
     .newsletter {
       min-height: 520px;
@@ -829,9 +810,7 @@
       font-size: 10px;
     }
 
-    /* =========================
-       FOOTER
-    ========================== */
+    /* FOOTER */
 
     footer {
       background: var(--dark);
@@ -890,9 +869,7 @@
       font-size: 11px;
     }
 
-    /* =========================
-       MODAL
-    ========================== */
+    /* MODAL */
 
     .modal {
       position: fixed;
@@ -1015,9 +992,7 @@
       background: #393832;
     }
 
-    /* =========================
-       TOAST
-    ========================== */
+    /* TOAST */
 
     .toast {
       position: fixed;
@@ -1038,9 +1013,7 @@
       opacity: 1;
     }
 
-    /* =========================
-       SCROLL REVEAL
-    ========================== */
+    /* SCROLL */
 
     .reveal {
       opacity: 0;
@@ -1055,11 +1028,10 @@
       transform: translateY(0);
     }
 
-    /* =========================
-       MOBILE
-    ========================== */
+    /* RESPONSIVE */
 
     @media (max-width: 1000px) {
+
       .products-grid {
         grid-template-columns: repeat(2, 1fr);
       }
@@ -1107,6 +1079,7 @@
     }
 
     @media (max-width: 760px) {
+
       .header {
         padding: 0 20px;
       }
@@ -1260,6 +1233,7 @@
     }
 
     @media (max-width: 480px) {
+
       .hero h1 {
         font-size: 55px;
       }
@@ -1286,652 +1260,731 @@
 
 <body>
 
-  <!-- HEADER -->
-  <header class="header" id="header">
-    <a href="#" class="brand">ÉLAN Maison</a>
+<header class="header" id="header">
 
-    <nav class="nav" id="nav">
-      <a href="#shop">New Arrivals</a>
-      <a href="#collections">Collections</a>
-      <a href="#story">Our Story</a>
-      <a href="#contact">Contact</a>
-    </nav>
+  <a href="#" class="brand">ÉLAN Maison</a>
 
-    <div class="header-actions">
+  <nav class="nav" id="nav">
+    <a href="#shop">New Arrivals</a>
+    <a href="#collections">Collections</a>
+    <a href="#story">Our Story</a>
+    <a href="#contact">Contact</a>
+  </nav>
 
-      <button class="icon-btn" aria-label="Wishlist">
-        ♡
-      </button>
+  <div class="header-actions">
 
-      <button class="icon-btn" aria-label="Cart">
-        <span>Bag</span>
-        <span class="count" id="cartCount">0</span>
-      </button>
+    <button class="icon-btn" aria-label="Wishlist">
+      ♡
+    </button>
 
-      <button class="icon-btn menu-btn" id="menuBtn" aria-label="Menu">
-        ☰
-      </button>
+    <button class="icon-btn" aria-label="Cart">
+      Bag
+      <span class="count" id="cartCount">0</span>
+    </button>
 
-    </div>
-  </header>
+    <button class="icon-btn menu-btn" id="menuBtn">
+      ☰
+    </button>
 
-  <!-- HERO -->
-  <section class="hero">
+  </div>
 
-    <div class="hero-content">
+</header>
 
-      <div class="eyebrow">
-        New Collection · 2026
-      </div>
 
-      <h1>
-        Objects for
-        <em>exceptional</em>
-        living.
-      </h1>
+<section class="hero">
 
-      <div class="hero-bottom">
-        <p>
-          Contemporary furniture shaped by quiet luxury,
-          refined materials and timeless architectural forms.
-          Designed for spaces that feel personal, calm and extraordinary.
-        </p>
+  <div class="hero-content">
 
-        <a href="#shop" class="circle-link">
-          Explore<br>Collection
-        </a>
-      </div>
-
+    <div class="eyebrow">
+      New Collection · 2026
     </div>
 
-  </section>
+    <h1>
+      Objects for
+      <em>exceptional</em>
+      living.
+    </h1>
 
-  <!-- COLLECTIONS -->
-  <section class="section" id="collections">
-
-    <div class="section-head reveal">
-
-      <div>
-        <span class="section-number">01 — Collections</span>
-        <h2 class="section-title">
-          Designed for<br>
-          modern living
-        </h2>
-      </div>
-
-      <div>
-        <p class="section-desc">
-          Explore sculptural furniture, soft textures and carefully
-          selected pieces created to transform contemporary interiors.
-        </p>
-      </div>
-
-    </div>
-
-    <div class="category-grid">
-
-      <article class="category-card reveal" data-filter-target="Sofa">
-
-        <img
-          src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?auto=format&fit=crop&w=1200&q=90"
-          alt="Luxury sofa"
-        >
-
-        <div class="category-overlay">
-          <span>01</span>
-          <h3>Sofas</h3>
-        </div>
-
-      </article>
-
-      <article class="category-card small reveal" data-filter-target="Chair">
-
-        <img
-          src="https://images.unsplash.com/photo-1567538096630-e0c55bd6374c?auto=format&fit=crop&w=1000&q=90"
-          alt="Luxury chair"
-        >
-
-        <div class="category-overlay">
-          <span>02</span>
-          <h3>Chairs</h3>
-        </div>
-
-      </article>
-
-      <article class="category-card small reveal" data-filter-target="Table">
-
-        <img
-          src="https://images.unsplash.com/photo-1615066390971-03e4e1c36ddf?auto=format&fit=crop&w=1000&q=90"
-          alt="Luxury table"
-        >
-
-        <div class="category-overlay">
-          <span>03</span>
-          <h3>Tables</h3>
-        </div>
-
-      </article>
-
-    </div>
-
-  </section>
-
-  <!-- EDITORIAL -->
-  <section class="editorial reveal">
-
-    <div class="editorial-image"></div>
-
-    <div class="editorial-copy">
-
-      <span class="tag">
-        The Art of Interior Living
-      </span>
-
-      <h2>
-        A quieter
-        kind of luxury.
-      </h2>
+    <div class="hero-bottom">
 
       <p>
-        Luxury is not excess. It is proportion, material,
-        craftsmanship and the feeling a space creates.
-        Our collections combine modern architecture with
-        warm, tactile details.
+        Contemporary furniture shaped by quiet luxury,
+        refined materials and timeless architectural forms.
+        Designed for spaces that feel personal, calm and extraordinary.
       </p>
 
-      <a href="#story" class="outline-btn">
-        Discover our philosophy
+      <a href="#shop" class="circle-link">
+        Explore<br>Collection
       </a>
 
     </div>
 
-  </section>
+  </div>
 
-  <!-- SHOP -->
-  <section class="section shop" id="shop">
+</section>
 
-    <div class="section-head reveal">
 
-      <div>
-        <span class="section-number">02 — New Pieces</span>
-        <h2 class="section-title">
-          The latest<br>
-          arrivals
-        </h2>
-      </div>
+<section class="section" id="collections">
 
-      <p class="section-desc">
-        A curated edit of our newest sofas, lounge chairs,
-        tables and interior objects.
-      </p>
+  <div class="section-head reveal">
 
-    </div>
-
-    <div class="filters reveal">
-
-      <button class="filter-btn active" data-filter="All">All</button>
-      <button class="filter-btn" data-filter="Sofa">Sofas</button>
-      <button class="filter-btn" data-filter="Chair">Chairs</button>
-      <button class="filter-btn" data-filter="Table">Tables</button>
-      <button class="filter-btn" data-filter="Lighting">Lighting</button>
-
-    </div>
-
-    <div class="products-grid" id="productsGrid"></div>
-
-  </section>
-
-  <!-- STORY -->
-  <section class="story" id="story">
-
-    <div class="story-small reveal">
-      <img
-        src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1200&q=90"
-        alt="Elegant modern interior"
-      >
-    </div>
-
-    <div class="story-copy reveal">
+    <div>
 
       <span class="section-number">
-        03 — Our Philosophy
+        01 — Collections
       </span>
 
-      <h2>
-        Made to outlive
-        every trend.
+      <h2 class="section-title">
+        Designed for<br>
+        modern living
       </h2>
 
-      <p>
-        We believe exceptional furniture should feel relevant today
-        and beautiful decades from now. Every ÉLAN Maison piece is
-        selected for its balance of form, comfort and lasting character.
-      </p>
-
-      <a href="#" class="text-link">
-        Read our story
-        <span></span>
-      </a>
-
-      <div class="stat-row">
-
-        <div class="stat">
-          <strong>18</strong>
-          <span>Design studios</span>
-        </div>
-
-        <div class="stat">
-          <strong>12</strong>
-          <span>Countries</span>
-        </div>
-
-        <div class="stat">
-          <strong>240+</strong>
-          <span>Curated pieces</span>
-        </div>
-
-      </div>
-
     </div>
 
-  </section>
-
-  <!-- COLLECTION BANNER -->
-  <section class="collection-banner">
-
-    <div class="reveal">
-
-      <div class="eyebrow">
-        Limited Edition
-      </div>
-
-      <h2>
-        Atelier<br>
-        No. 04
-      </h2>
-
-      <p>
-        A sculptural collection inspired by natural stone,
-        soft geometry and modern European interiors.
-      </p>
-
-      <a href="#shop" class="outline-btn">
-        View collection
-      </a>
-
-    </div>
-
-  </section>
-
-  <!-- MARQUEE -->
-  <div class="marquee">
-
-    <div class="marquee-track">
-
-      <span>Modern Design <i>✦</i></span>
-      <span>Quiet Luxury <i>✦</i></span>
-      <span>Curated Living <i>✦</i></span>
-      <span>Exceptional Materials <i>✦</i></span>
-
-      <span>Modern Design <i>✦</i></span>
-      <span>Quiet Luxury <i>✦</i></span>
-      <span>Curated Living <i>✦</i></span>
-      <span>Exceptional Materials <i>✦</i></span>
-
-    </div>
+    <p class="section-desc">
+      Explore sculptural furniture, soft textures and carefully
+      selected pieces created to transform contemporary interiors.
+    </p>
 
   </div>
 
-  <!-- NEWSLETTER -->
-  <section class="newsletter">
 
-    <div class="newsletter-inner reveal">
+  <div class="category-grid">
 
-      <span>Private access</span>
+    <article class="category-card reveal" data-filter-target="Sofa">
 
-      <h2>
-        Enter the world
-        of ÉLAN Maison
+      <img
+        src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?auto=format&fit=crop&w=1200&q=90"
+        alt="Luxury sofa"
+      >
+
+      <div class="category-overlay">
+        <span>01</span>
+        <h3>Sofas</h3>
+      </div>
+
+    </article>
+
+
+    <article class="category-card small reveal" data-filter-target="Chair">
+
+      <img
+        src="https://images.unsplash.com/photo-1567538096630-e0c55bd6374c?auto=format&fit=crop&w=1000&q=90"
+        alt="Luxury chair"
+      >
+
+      <div class="category-overlay">
+        <span>02</span>
+        <h3>Chairs</h3>
+      </div>
+
+    </article>
+
+
+    <article class="category-card small reveal" data-filter-target="Table">
+
+      <img
+        src="https://images.unsplash.com/photo-1615066390971-03e4e1c36ddf?auto=format&fit=crop&w=1000&q=90"
+        alt="Luxury table"
+      >
+
+      <div class="category-overlay">
+        <span>03</span>
+        <h3>Tables</h3>
+      </div>
+
+    </article>
+
+  </div>
+
+</section>
+
+
+<section class="editorial reveal">
+
+  <div class="editorial-image"></div>
+
+  <div class="editorial-copy">
+
+    <span class="tag">
+      The Art of Interior Living
+    </span>
+
+    <h2>
+      A quieter kind of luxury.
+    </h2>
+
+    <p>
+      Luxury is not excess. It is proportion, material,
+      craftsmanship and the feeling a space creates.
+      Our collections combine modern architecture with
+      warm, tactile details.
+    </p>
+
+    <a href="#story" class="outline-btn">
+      Discover our philosophy
+    </a>
+
+  </div>
+
+</section>
+
+
+<section class="section shop" id="shop">
+
+  <div class="section-head reveal">
+
+    <div>
+
+      <span class="section-number">
+        02 — New Pieces
+      </span>
+
+      <h2 class="section-title">
+        The latest<br>
+        arrivals
       </h2>
 
-      <p>
-        Receive new collection previews, design stories
-        and private invitations.
-      </p>
-
-      <form class="newsletter-form" id="newsletterForm">
-
-        <input
-          type="email"
-          placeholder="Your email address"
-          required
-        >
-
-        <button type="submit">
-          Subscribe →
-        </button>
-
-      </form>
-
     </div>
 
-  </section>
+    <p class="section-desc">
+      A curated edit of our newest sofas, lounge chairs,
+      tables and interior objects.
+    </p>
 
-  <!-- FOOTER -->
-  <footer id="contact">
+  </div>
 
-    <div class="footer-top">
 
-      <div class="footer-about">
+  <div class="filters reveal">
 
-        <div class="footer-brand">
-          ÉLAN Maison
-        </div>
+    <button class="filter-btn active" data-filter="All">
+      All
+    </button>
 
-        <p class="footer-intro">
-          Contemporary furniture and interior objects
-          for refined modern spaces.
-        </p>
+    <button class="filter-btn" data-filter="Sofa">
+      Sofas
+    </button>
 
+    <button class="filter-btn" data-filter="Chair">
+      Chairs
+    </button>
+
+    <button class="filter-btn" data-filter="Table">
+      Tables
+    </button>
+
+    <button class="filter-btn" data-filter="Lighting">
+      Lighting
+    </button>
+
+  </div>
+
+
+  <div class="products-grid" id="productsGrid"></div>
+
+</section>
+
+
+<section class="story" id="story">
+
+  <div class="story-small reveal">
+
+    <img
+      src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1200&q=90"
+      alt="Elegant modern interior"
+    >
+
+  </div>
+
+
+  <div class="story-copy reveal">
+
+    <span class="section-number">
+      03 — Our Philosophy
+    </span>
+
+    <h2>
+      Made to outlive every trend.
+    </h2>
+
+    <p>
+      We believe exceptional furniture should feel relevant today
+      and beautiful decades from now. Every ÉLAN Maison piece is
+      selected for its balance of form, comfort and lasting character.
+    </p>
+
+    <a href="#" class="text-link">
+      Read our story
+      <span></span>
+    </a>
+
+    <div class="stat-row">
+
+      <div class="stat">
+        <strong>18</strong>
+        <span>Design studios</span>
       </div>
 
-      <div class="footer-col">
-        <h4>Shop</h4>
-        <a href="#shop">New Arrivals</a>
-        <a href="#shop">Sofas</a>
-        <a href="#shop">Chairs</a>
-        <a href="#shop">Tables</a>
-        <a href="#shop">Lighting</a>
+      <div class="stat">
+        <strong>12</strong>
+        <span>Countries</span>
       </div>
 
-      <div class="footer-col">
-        <h4>Maison</h4>
-        <a href="#story">Our Story</a>
-        <a href="#">Designers</a>
-        <a href="#">Materials</a>
-        <a href="#">Journal</a>
-      </div>
-
-      <div class="footer-col">
-        <h4>Client Care</h4>
-        <a href="#">Contact</a>
-        <a href="#">Delivery</a>
-        <a href="#">Returns</a>
-        <a href="#">Interior Service</a>
-      </div>
-
-    </div>
-
-    <div class="footer-bottom">
-
-      <span>
-        © 2026 ÉLAN Maison. Portfolio concept.
-      </span>
-
-      <span>
-        Instagram · Pinterest · LinkedIn
-      </span>
-
-    </div>
-
-  </footer>
-
-  <!-- PRODUCT MODAL -->
-  <div class="modal" id="productModal">
-
-    <div class="modal-card">
-
-      <div class="modal-image">
-        <img id="modalImage" src="" alt="">
-      </div>
-
-      <div class="modal-copy">
-
-        <button class="close-modal" id="closeModal">
-          ×
-        </button>
-
-        <span class="mini" id="modalCategory"></span>
-
-        <h2 id="modalName"></h2>
-
-        <div class="modal-price" id="modalPrice"></div>
-
-        <p>
-          Designed with sculptural proportions and tactile materials,
-          this piece brings a refined architectural presence to modern
-          living spaces. Created for both visual impact and everyday comfort.
-        </p>
-
-        <div class="swatches">
-
-          <button
-            class="swatch"
-            style="background:#d4c7b5"
-            aria-label="Beige"
-          ></button>
-
-          <button
-            class="swatch"
-            style="background:#8b8076"
-            aria-label="Taupe"
-          ></button>
-
-          <button
-            class="swatch"
-            style="background:#383734"
-            aria-label="Charcoal"
-          ></button>
-
-        </div>
-
-        <button class="add-cart" id="addCart">
-          Add to collection
-        </button>
-
+      <div class="stat">
+        <strong>240+</strong>
+        <span>Curated pieces</span>
       </div>
 
     </div>
 
   </div>
 
-  <div class="toast" id="toast">
-    Added to your collection.
+</section>
+
+
+<section class="collection-banner">
+
+  <div class="reveal">
+
+    <div class="eyebrow">
+      Limited Edition
+    </div>
+
+    <h2>
+      Atelier<br>
+      No. 04
+    </h2>
+
+    <p>
+      A sculptural collection inspired by natural stone,
+      soft geometry and modern European interiors.
+    </p>
+
+    <a href="#shop" class="outline-btn">
+      View collection
+    </a>
+
   </div>
+
+</section>
+
+
+<div class="marquee">
+
+  <div class="marquee-track">
+
+    <span>Modern Design <i>✦</i></span>
+    <span>Quiet Luxury <i>✦</i></span>
+    <span>Curated Living <i>✦</i></span>
+    <span>Exceptional Materials <i>✦</i></span>
+
+    <span>Modern Design <i>✦</i></span>
+    <span>Quiet Luxury <i>✦</i></span>
+    <span>Curated Living <i>✦</i></span>
+    <span>Exceptional Materials <i>✦</i></span>
+
+  </div>
+
+</div>
+
+
+<section class="newsletter">
+
+  <div class="newsletter-inner reveal">
+
+    <span>
+      Private access
+    </span>
+
+    <h2>
+      Enter the world of ÉLAN Maison
+    </h2>
+
+    <p>
+      Receive new collection previews, design stories
+      and private invitations.
+    </p>
+
+    <form class="newsletter-form" id="newsletterForm">
+
+      <input
+        type="email"
+        placeholder="Your email address"
+        required
+      >
+
+      <button type="submit">
+        Subscribe →
+      </button>
+
+    </form>
+
+  </div>
+
+</section>
+
+
+<footer id="contact">
+
+  <div class="footer-top">
+
+    <div class="footer-about">
+
+      <div class="footer-brand">
+        ÉLAN Maison
+      </div>
+
+      <p class="footer-intro">
+        Contemporary furniture and interior objects
+        for refined modern spaces.
+      </p>
+
+    </div>
+
+
+    <div class="footer-col">
+
+      <h4>Shop</h4>
+
+      <a href="#shop">New Arrivals</a>
+      <a href="#shop">Sofas</a>
+      <a href="#shop">Chairs</a>
+      <a href="#shop">Tables</a>
+      <a href="#shop">Lighting</a>
+
+    </div>
+
+
+    <div class="footer-col">
+
+      <h4>Maison</h4>
+
+      <a href="#story">Our Story</a>
+      <a href="#">Designers</a>
+      <a href="#">Materials</a>
+      <a href="#">Journal</a>
+
+    </div>
+
+
+    <div class="footer-col">
+
+      <h4>Client Care</h4>
+
+      <a href="#">Contact</a>
+      <a href="#">Delivery</a>
+      <a href="#">Returns</a>
+      <a href="#">Interior Service</a>
+
+    </div>
+
+  </div>
+
+
+  <div class="footer-bottom">
+
+    <span>
+      © 2026 ÉLAN Maison. Portfolio concept.
+    </span>
+
+    <span>
+      Instagram · Pinterest · LinkedIn
+    </span>
+
+  </div>
+
+</footer>
+
+
+<div class="modal" id="productModal">
+
+  <div class="modal-card">
+
+    <div class="modal-image">
+
+      <img
+        id="modalImage"
+        src=""
+        alt=""
+      >
+
+    </div>
+
+
+    <div class="modal-copy">
+
+      <button class="close-modal" id="closeModal">
+        ×
+      </button>
+
+      <span class="mini" id="modalCategory"></span>
+
+      <h2 id="modalName"></h2>
+
+      <div class="modal-price" id="modalPrice"></div>
+
+      <p>
+        Designed with sculptural proportions and tactile materials,
+        this piece brings a refined architectural presence to modern
+        living spaces. Created for both visual impact and everyday comfort.
+      </p>
+
+      <div class="swatches">
+
+        <button
+          class="swatch"
+          style="background:#d4c7b5"
+        ></button>
+
+        <button
+          class="swatch"
+          style="background:#8b8076"
+        ></button>
+
+        <button
+          class="swatch"
+          style="background:#383734"
+        ></button>
+
+      </div>
+
+      <button class="add-cart" id="addCart">
+        Add to collection
+      </button>
+
+    </div>
+
+  </div>
+
+</div>
+
+
+<div class="toast" id="toast">
+  Added to your collection.
+</div>
+
 
 <script>
 
-  /* =========================
-     PRODUCTS
-  ========================== */
+const products = [
 
-  const products = [
-    {
-      id: 1,
-      name: "Luna Modular Sofa",
-      category: "Sofa",
-      price: "$4,890",
-      image: "https://images.unsplash.com/photo-1540574163026-643ea20ade25?auto=format&fit=crop&w=1000&q=90",
-      isNew: true
-    },
+  {
+    id: 1,
+    name: "Luna Modular Sofa",
+    category: "Sofa",
+    price: "$4,890",
+    image: "https://images.unsplash.com/photo-1540574163026-643ea20ade25?auto=format&fit=crop&w=1000&q=90",
+    isNew: true
+  },
 
-    {
-      id: 2,
-      name: "Noma Lounge Chair",
-      category: "Chair",
-      price: "$2,180",
-      image: "https://images.unsplash.com/photo-1598300056393-4aac492f4344?auto=format&fit=crop&w=1000&q=90",
-      isNew: true
-    },
+  {
+    id: 2,
+    name: "Noma Lounge Chair",
+    category: "Chair",
+    price: "$2,180",
+    image: "https://images.unsplash.com/photo-1598300056393-4aac492f4344?auto=format&fit=crop&w=1000&q=90",
+    isNew: true
+  },
 
-    {
-      id: 3,
-      name: "Aurea Stone Table",
-      category: "Table",
-      price: "$3,740",
-      image: "https://images.unsplash.com/photo-1577140917170-285929fb55b7?auto=format&fit=crop&w=1000&q=90",
-      isNew: false
-    },
+  {
+    id: 3,
+    name: "Aurea Stone Table",
+    category: "Table",
+    price: "$3,740",
+    image: "https://images.unsplash.com/photo-1577140917170-285929fb55b7?auto=format&fit=crop&w=1000&q=90",
+    isNew: false
+  },
 
-    {
-      id: 4,
-      name: "Halo Floor Lamp",
-      category: "Lighting",
-      price: "$1,290",
-      image: "https://images.unsplash.com/photo-1540932239986-30128078f3c5?auto=format&fit=crop&w=1000&q=90",
-      isNew: true
-    },
+  {
+    id: 4,
+    name: "Halo Floor Lamp",
+    category: "Lighting",
+    price: "$1,290",
+    image: "https://images.unsplash.com/photo-1540932239986-30128078f3c5?auto=format&fit=crop&w=1000&q=90",
+    isNew: true
+  },
 
-    {
-      id: 5,
-      name: "Cove Curved Sofa",
-      category: "Sofa",
-      price: "$5,620",
-      image: "https://images.unsplash.com/photo-1550254478-ead40cc54513?auto=format&fit=crop&w=1000&q=90",
-      isNew: false
-    },
+  {
+    id: 5,
+    name: "Cove Curved Sofa",
+    category: "Sofa",
+    price: "$5,620",
+    image: "https://images.unsplash.com/photo-1550254478-ead40cc54513?auto=format&fit=crop&w=1000&q=90",
+    isNew: false
+  },
 
-    {
-      id: 6,
-      name: "Forma Accent Chair",
-      category: "Chair",
-      price: "$1,960",
-      image: "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?auto=format&fit=crop&w=1000&q=90",
-      isNew: true
-    },
+  {
+    id: 6,
+    name: "Forma Accent Chair",
+    category: "Chair",
+    price: "$1,960",
+    image: "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?auto=format&fit=crop&w=1000&q=90",
+    isNew: true
+  },
 
-    {
-      id: 7,
-      name: "Monolith Coffee Table",
-      category: "Table",
-      price: "$2,760",
-      image: "https://images.unsplash.com/photo-1532372320572-cda25653a694?auto=format&fit=crop&w=1000&q=90",
-      isNew: false
-    },
+  {
+    id: 7,
+    name: "Monolith Coffee Table",
+    category: "Table",
+    price: "$2,760",
+    image: "https://images.pexels.com/photos/1866149/pexels-photo-1866149.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    isNew: false
+  },
 
-    {
-      id: 8,
-      name: "Orb Table Lamp",
-      category: "Lighting",
-      price: "$890",
-      image: "https://images.unsplash.com/photo-1513506003901-1e6a229e2d15?auto=format&fit=crop&w=1000&q=90",
-      isNew: true
-    }
-  ];
-
-
-  const productsGrid = document.getElementById("productsGrid");
-
-  function renderProducts(filter = "All") {
-
-    productsGrid.innerHTML = "";
-
-    const filteredProducts =
-      filter === "All"
-        ? products
-        : products.filter(product => product.category === filter);
-
-
-    filteredProducts.forEach(product => {
-
-      const card = document.createElement("article");
-
-      card.className = "product reveal visible";
-
-      card.innerHTML = `
-        <div class="product-image">
-
-          <img
-            src="${product.image}"
-            alt="${product.name}"
-          >
-
-          ${
-            product.isNew
-              ? `<span class="new-badge">New</span>`
-              : ""
-          }
-
-          <button
-            class="heart"
-            aria-label="Add ${product.name} to wishlist"
-          >
-            ♡
-          </button>
-
-          <button
-            class="quick"
-            data-id="${product.id}"
-          >
-            Quick view
-          </button>
-
-        </div>
-
-        <div class="product-info">
-
-          <div>
-            <div class="product-name">
-              ${product.name}
-            </div>
-
-            <div class="product-category">
-              ${product.category}
-            </div>
-          </div>
-
-          <div class="price">
-            ${product.price}
-          </div>
-
-        </div>
-      `;
-
-      productsGrid.appendChild(card);
-
-    });
-
-    addProductEvents();
+  {
+    id: 8,
+    name: "Orb Table Lamp",
+    category: "Lighting",
+    price: "$890",
+    image: "https://images.unsplash.com/photo-1513506003901-1e6a229e2d15?auto=format&fit=crop&w=1000&q=90",
+    isNew: true
   }
 
+];
 
-  renderProducts();
+
+const productsGrid =
+  document.getElementById("productsGrid");
 
 
-  /* =========================
-     FILTERING
-  ========================== */
+function renderProducts(filter = "All") {
 
-  document.querySelectorAll(".filter-btn").forEach(button => {
+  productsGrid.innerHTML = "";
+
+  const filteredProducts =
+    filter === "All"
+      ? products
+      : products.filter(
+          product => product.category === filter
+        );
+
+
+  filteredProducts.forEach(product => {
+
+    const card =
+      document.createElement("article");
+
+    card.className =
+      "product reveal visible";
+
+
+    card.innerHTML = `
+
+      <div class="product-image">
+
+        <img
+          src="${product.image}"
+          alt="${product.name}"
+          loading="lazy"
+        >
+
+        ${
+          product.isNew
+            ? `<span class="new-badge">New</span>`
+            : ""
+        }
+
+        <button
+          class="heart"
+          aria-label="Add to wishlist"
+        >
+          ♡
+        </button>
+
+        <button
+          class="quick"
+          data-id="${product.id}"
+        >
+          Quick view
+        </button>
+
+      </div>
+
+
+      <div class="product-info">
+
+        <div>
+
+          <div class="product-name">
+            ${product.name}
+          </div>
+
+          <div class="product-category">
+            ${product.category}
+          </div>
+
+        </div>
+
+
+        <div class="price">
+          ${product.price}
+        </div>
+
+      </div>
+
+    `;
+
+
+    productsGrid.appendChild(card);
+
+  });
+
+
+  addProductEvents();
+
+}
+
+
+renderProducts();
+
+
+
+document
+  .querySelectorAll(".filter-btn")
+  .forEach(button => {
 
     button.addEventListener("click", () => {
 
       document
         .querySelectorAll(".filter-btn")
-        .forEach(btn => btn.classList.remove("active"));
+        .forEach(btn =>
+          btn.classList.remove("active")
+        );
+
 
       button.classList.add("active");
 
-      renderProducts(button.dataset.filter);
+
+      renderProducts(
+        button.dataset.filter
+      );
 
     });
 
   });
 
 
-  document.querySelectorAll("[data-filter-target]").forEach(card => {
+
+document
+  .querySelectorAll("[data-filter-target]")
+  .forEach(card => {
 
     card.addEventListener("click", () => {
 
-      const target = card.dataset.filterTarget;
+      const target =
+        card.dataset.filterTarget;
 
-      const targetButton = document.querySelector(
-        `[data-filter="${target}"]`
-      );
+
+      const targetButton =
+        document.querySelector(
+          `[data-filter="${target}"]`
+        );
+
 
       if (targetButton) {
         targetButton.click();
       }
+
 
       document
         .getElementById("shop")
@@ -1944,45 +1997,52 @@
   });
 
 
-  /* =========================
-     HEADER
-  ========================== */
 
-  const header = document.getElementById("header");
-
-  window.addEventListener("scroll", () => {
-
-    if (window.scrollY > 80) {
-      header.classList.add("scrolled");
-    } else {
-      header.classList.remove("scrolled");
-    }
-
-  });
+const header =
+  document.getElementById("header");
 
 
-  /* =========================
-     MOBILE MENU
-  ========================== */
+window.addEventListener("scroll", () => {
 
-  const menuBtn = document.getElementById("menuBtn");
-  const nav = document.getElementById("nav");
+  if (window.scrollY > 80) {
 
-  menuBtn.addEventListener("click", () => {
+    header.classList.add("scrolled");
 
-    nav.classList.toggle("open");
+  } else {
 
-    document.body.classList.toggle("no-scroll");
+    header.classList.remove("scrolled");
 
-    menuBtn.textContent =
-      nav.classList.contains("open")
-        ? "×"
-        : "☰";
+  }
 
-  });
+});
 
 
-  document.querySelectorAll(".nav a").forEach(link => {
+
+const menuBtn =
+  document.getElementById("menuBtn");
+
+const nav =
+  document.getElementById("nav");
+
+
+menuBtn.addEventListener("click", () => {
+
+  nav.classList.toggle("open");
+
+  document.body.classList.toggle("no-scroll");
+
+
+  menuBtn.textContent =
+    nav.classList.contains("open")
+      ? "×"
+      : "☰";
+
+});
+
+
+document
+  .querySelectorAll(".nav a")
+  .forEach(link => {
 
     link.addEventListener("click", () => {
 
@@ -1997,228 +2057,262 @@
   });
 
 
-  /* =========================
-     MODAL
-  ========================== */
 
-  const modal = document.getElementById("productModal");
+const modal =
+  document.getElementById("productModal");
 
-  const modalImage = document.getElementById("modalImage");
-  const modalName = document.getElementById("modalName");
-  const modalCategory = document.getElementById("modalCategory");
-  const modalPrice = document.getElementById("modalPrice");
+const modalImage =
+  document.getElementById("modalImage");
 
-  const closeModal = document.getElementById("closeModal");
+const modalName =
+  document.getElementById("modalName");
+
+const modalCategory =
+  document.getElementById("modalCategory");
+
+const modalPrice =
+  document.getElementById("modalPrice");
+
+const closeModal =
+  document.getElementById("closeModal");
 
 
-  function openProduct(id) {
+function openProduct(id) {
 
-    const product = products.find(
+  const product =
+    products.find(
       item => item.id === Number(id)
     );
 
-    if (!product) return;
 
-    modalImage.src = product.image;
-    modalImage.alt = product.name;
+  if (!product) return;
 
-    modalName.textContent = product.name;
-    modalCategory.textContent = product.category;
-    modalPrice.textContent = product.price;
 
-    modal.classList.add("open");
+  modalImage.src =
+    product.image;
 
-    document.body.classList.add("no-scroll");
+  modalImage.alt =
+    product.name;
+
+  modalName.textContent =
+    product.name;
+
+  modalCategory.textContent =
+    product.category;
+
+  modalPrice.textContent =
+    product.price;
+
+
+  modal.classList.add("open");
+
+  document.body.classList.add("no-scroll");
+
+}
+
+
+
+function closeProductModal() {
+
+  modal.classList.remove("open");
+
+  document.body.classList.remove("no-scroll");
+
+}
+
+
+
+closeModal.addEventListener(
+  "click",
+  closeProductModal
+);
+
+
+modal.addEventListener("click", event => {
+
+  if (event.target === modal) {
+
+    closeProductModal();
 
   }
 
+});
 
-  function closeProductModal() {
 
-    modal.classList.remove("open");
+document.addEventListener("keydown", event => {
 
-    document.body.classList.remove("no-scroll");
+  if (event.key === "Escape") {
+
+    closeProductModal();
 
   }
 
-
-  closeModal.addEventListener(
-    "click",
-    closeProductModal
-  );
+});
 
 
-  modal.addEventListener("click", event => {
 
-    if (event.target === modal) {
-      closeProductModal();
-    }
+function addProductEvents() {
 
-  });
+  document
+    .querySelectorAll(".quick")
+    .forEach(button => {
 
-
-  document.addEventListener("keydown", event => {
-
-    if (event.key === "Escape") {
-      closeProductModal();
-    }
-
-  });
-
-
-  /* =========================
-     PRODUCT EVENTS
-  ========================== */
-
-  function addProductEvents() {
-
-    document
-      .querySelectorAll(".quick")
-      .forEach(button => {
-
-        button.addEventListener("click", event => {
+      button.addEventListener(
+        "click",
+        event => {
 
           event.stopPropagation();
 
-          openProduct(button.dataset.id);
+          openProduct(
+            button.dataset.id
+          );
 
-        });
+        }
+      );
 
-      });
+    });
 
 
-    document
-      .querySelectorAll(".heart")
-      .forEach(button => {
+  document
+    .querySelectorAll(".heart")
+    .forEach(button => {
 
-        button.addEventListener("click", event => {
+      button.addEventListener(
+        "click",
+        event => {
 
           event.stopPropagation();
 
           button.classList.toggle("active");
+
 
           button.textContent =
             button.classList.contains("active")
               ? "♥"
               : "♡";
 
-        });
+        }
+      );
 
-      });
+    });
 
-  }
-
-
-  /* =========================
-     CART
-  ========================== */
-
-  let cartCount = 0;
-
-  const cartCounter =
-    document.getElementById("cartCount");
-
-  const addCart =
-    document.getElementById("addCart");
+}
 
 
-  addCart.addEventListener("click", () => {
 
-    cartCount++;
-
-    cartCounter.textContent = cartCount;
-
-    closeProductModal();
-
-    showToast("Added to your collection.");
-
-  });
+let cartCount = 0;
 
 
-  /* =========================
-     TOAST
-  ========================== */
+const cartCounter =
+  document.getElementById("cartCount");
 
-  const toast =
-    document.getElementById("toast");
-
-
-  function showToast(message) {
-
-    toast.textContent = message;
-
-    toast.classList.add("show");
-
-    setTimeout(() => {
-
-      toast.classList.remove("show");
-
-    }, 2600);
-
-  }
+const addCart =
+  document.getElementById("addCart");
 
 
-  /* =========================
-     NEWSLETTER
-  ========================== */
+addCart.addEventListener("click", () => {
 
-  document
-    .getElementById("newsletterForm")
-    .addEventListener("submit", event => {
+  cartCount++;
+
+  cartCounter.textContent =
+    cartCount;
+
+
+  closeProductModal();
+
+
+  showToast(
+    "Added to your collection."
+  );
+
+});
+
+
+
+const toast =
+  document.getElementById("toast");
+
+
+function showToast(message) {
+
+  toast.textContent =
+    message;
+
+  toast.classList.add("show");
+
+
+  setTimeout(() => {
+
+    toast.classList.remove("show");
+
+  }, 2600);
+
+}
+
+
+
+document
+  .getElementById("newsletterForm")
+  .addEventListener(
+    "submit",
+    event => {
 
       event.preventDefault();
 
+
       const input =
         event.target.querySelector("input");
+
 
       showToast(
         "Welcome to ÉLAN Maison."
       );
 
+
       input.value = "";
 
-    });
+    }
+  );
 
 
-  /* =========================
-     SCROLL REVEAL
-  ========================== */
 
-  const revealObserver =
-    new IntersectionObserver(
+const revealObserver =
+  new IntersectionObserver(
 
-      entries => {
+    entries => {
 
-        entries.forEach(entry => {
+      entries.forEach(entry => {
 
-          if (entry.isIntersecting) {
+        if (entry.isIntersecting) {
 
-            entry.target.classList.add("visible");
+          entry.target.classList.add(
+            "visible"
+          );
 
-            revealObserver.unobserve(
-              entry.target
-            );
+          revealObserver.unobserve(
+            entry.target
+          );
 
-          }
+        }
 
-        });
+      });
 
-      },
+    },
 
-      {
-        threshold: 0.12
-      }
+    {
+      threshold: 0.12
+    }
 
-    );
+  );
 
 
-  document
-    .querySelectorAll(".reveal")
-    .forEach(element => {
+document
+  .querySelectorAll(".reveal")
+  .forEach(element => {
 
-      revealObserver.observe(element);
+    revealObserver.observe(element);
 
-    });
+  });
 
 </script>
 
